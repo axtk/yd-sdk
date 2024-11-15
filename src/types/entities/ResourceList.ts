@@ -1,10 +1,10 @@
-import type {ResourceCore} from './ResourceCore';
+import type {ResourceItem} from './ResourceItem';
 import type {Sort} from './Sort';
 
 export type ResourceList = {
     sort: Sort;
     public_key: string;
-    items: Partial<ResourceCore>[];
+    items: Partial<ResourceItem>[];
     path: string;
     limit: number;
     offset: number;

@@ -2,7 +2,7 @@ import type {ISODateString} from '../util/ISODateString';
 import type {URLString} from '../util/URLString';
 import type {ResourceType} from './ResourceType';
 
-export type ResourceCore<T extends ResourceType = ResourceType> = {
+export type ResourceItem<T extends ResourceType = ResourceType> = {
     public_key?: string;
     public_url?: URLString;
     resource_id: string;

@@ -1,7 +1,7 @@
-import type {ResourceCore} from './ResourceCore';
+import type {ResourceItem} from './ResourceItem';
 
 export type FileList = {
-    items: Partial<ResourceCore>[];
+    items: Partial<ResourceItem>[];
     limit: number;
     offset: number;
 };

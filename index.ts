@@ -12,7 +12,7 @@ export * from './src/types/entities/OperationLink';
 export * from './src/types/entities/OperationStatus';
 export * from './src/types/entities/PublicResourceList';
 export * from './src/types/entities/Resource';
-export * from './src/types/entities/ResourceCore';
+export * from './src/types/entities/ResourceItem';
 export * from './src/types/entities/ResourceList';
 export * from './src/types/entities/ResourceType';
 export * from './src/types/entities/Sort';
