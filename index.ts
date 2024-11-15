@@ -1,3 +1,4 @@
+export type {RequestQuery, RequestParams} from 'reqsrv';
 export * from './src/sdk';
 export * from './src/types/APISchema';
 export * from './src/types/ServiceParams';
