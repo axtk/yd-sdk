@@ -1,6 +1,6 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {Link} from '~/src/types/entities/Link';
-import type {PathString} from '~/src/types/util/PathString';
+import type {Link} from '../entities/Link';
+import type {PathString} from '../util/PathString';
 
 export type PublishResource = SchemaEntry<{
     request: {

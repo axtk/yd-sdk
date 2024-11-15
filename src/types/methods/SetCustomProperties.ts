@@ -1,7 +1,7 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {PathString} from '~/src/types/util/PathString';
-import type {FieldList} from '~/src/types/entities/FieldList';
-import type {Resource} from '~/src/types/entities/Resource';
+import type {PathString} from '../util/PathString';
+import type {FieldList} from '../entities/FieldList';
+import type {Resource} from '../entities/Resource';
 
 export type SetCustomProperties = SchemaEntry<{
     request: {

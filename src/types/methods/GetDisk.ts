@@ -1,5 +1,5 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {Disk} from '~/src/types/entities/Disk';
+import type {Disk} from '../entities/Disk';
 
 export type GetDisk = SchemaEntry<{
     request: void;

@@ -1,7 +1,7 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {ResourceType} from '~/src/types/entities/ResourceType';
-import type {PublicResourceList} from '~/src/types/entities/PublicResourceList';
-import type {FieldList} from '~/src/types/entities/FieldList';
+import type {ResourceType} from '../entities/ResourceType';
+import type {PublicResourceList} from '../entities/PublicResourceList';
+import type {FieldList} from '../entities/FieldList';
 
 export type GetPublicResources = SchemaEntry<{
     request: void | {

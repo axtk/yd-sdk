@@ -1,5 +1,5 @@
-import type {ISODateString} from '~/src/types/util/ISODateString';
-import type {URLString} from '~/src/types/util/URLString';
+import type {ISODateString} from '../util/ISODateString';
+import type {URLString} from '../util/URLString';
 import type {ResourceType} from './ResourceType';
 
 export type ResourceCore<T extends ResourceType = ResourceType> = {

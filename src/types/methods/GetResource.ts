@@ -1,8 +1,8 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {FieldList} from '~/src/types/entities/FieldList';
-import type {Resource} from '~/src/types/entities/Resource';
-import type {Sort} from '~/src/types/entities/Sort';
-import type {PathString} from '~/src/types/util/PathString';
+import type {FieldList} from '../entities/FieldList';
+import type {Resource} from '../entities/Resource';
+import type {Sort} from '../entities/Sort';
+import type {PathString} from '../util/PathString';
 
 export type GetResource = SchemaEntry<{
     request: {

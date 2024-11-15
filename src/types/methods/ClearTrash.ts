@@ -1,6 +1,6 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {PathString} from '~/src/types/util/PathString';
-import type {OperationLink} from '~/src/types/entities/OperationLink';
+import type {PathString} from '../util/PathString';
+import type {OperationLink} from '../entities/OperationLink';
 
 export type ClearTrash = SchemaEntry<{
     request: void | {

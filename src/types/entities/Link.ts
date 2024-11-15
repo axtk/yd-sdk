@@ -1,4 +1,4 @@
-import type {URLString} from '~/src/types/util/URLString';
+import type {URLString} from '../util/URLString';
 
 export type Link = {
     href: URLString;

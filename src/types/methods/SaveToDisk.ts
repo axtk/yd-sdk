@@ -1,7 +1,7 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {Link} from '~/src/types/entities/Link';
-import type {OperationLink} from '~/src/types/entities/OperationLink';
-import type {PathString} from '~/src/types/util/PathString';
+import type {Link} from '../entities/Link';
+import type {OperationLink} from '../entities/OperationLink';
+import type {PathString} from '../util/PathString';
 
 export type SaveToDisk = SchemaEntry<{
     request: {

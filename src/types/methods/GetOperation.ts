@@ -1,5 +1,5 @@
 import type {SchemaEntry} from 'reqsrv';
-import type {OperationStatus} from '~/src/types/entities/OperationStatus';
+import type {OperationStatus} from '../entities/OperationStatus';
 
 export type GetOperation = SchemaEntry<{
     request: {

@@ -1,9 +1,6 @@
 {
     "include": ["src", "index.ts"],
     "compilerOptions": {
-        "paths": {
-            "~/*": ["./*"],
-        },
         "lib": ["ESNext", "DOM"],
         "target": "ESNext",
         "outDir": "dist",

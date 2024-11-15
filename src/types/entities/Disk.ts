@@ -1,6 +1,6 @@
-import type {User} from '~/src/types/entities/User';
-import type {DiskPathString} from '~/src/types/util/DiskPathString';
-import type {ISODateString} from '~/src/types/util/ISODateString';
+import type {User} from '../entities/User';
+import type {DiskPathString} from '../util/DiskPathString';
+import type {ISODateString} from '../util/ISODateString';
 
 export type Disk = {
     /** In bytes */
