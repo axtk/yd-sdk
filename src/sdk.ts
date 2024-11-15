@@ -70,3 +70,5 @@ export function sdk(params: ServiceParams = {}) {
         }),
     };
 }
+
+export type SDK = ReturnType<typeof sdk>;
