@@ -1,0 +1,15 @@
+{
+    "include": ["src", "index.ts"],
+    "compilerOptions": {
+        "paths": {
+            "~/*": ["./*"],
+        },
+        "lib": ["ESNext", "DOM"],
+        "target": "ESNext",
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}
