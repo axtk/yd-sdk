@@ -85,4 +85,4 @@ The method parameters are the query parameters of the corresponding API methods.
 
 ## See also
 
-&rarr; [*Yandex API Docs*](https://yandex.com/dev/disk-api/doc/en/)
+&rarr; [*Yandex Disk API Docs*](https://yandex.com/dev/disk-api/doc/en/)
