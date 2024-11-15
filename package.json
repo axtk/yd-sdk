@@ -15,6 +15,10 @@
     "sdk",
     "yandex-disk"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axtk/yd-sdk.git"
+  },
   "devDependencies": {
     "@types/node": "^22.9.0",
     "esbuild": "^0.24.0"
