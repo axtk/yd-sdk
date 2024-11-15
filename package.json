@@ -1,7 +1,7 @@
 {
   "name": "yd-sdk",
   "version": "0.1.1",
-  "description": "",
+  "description": "Typed isomorphic Yandex Disk SDK",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -11,6 +11,10 @@
   },
   "author": "axtk",
   "license": "ISC",
+  "keywords": [
+    "sdk",
+    "yandex-disk"
+  ],
   "devDependencies": {
     "@types/node": "^22.9.0",
     "esbuild": "^0.24.0"
