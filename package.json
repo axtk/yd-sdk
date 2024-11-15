@@ -1,6 +1,6 @@
 {
   "name": "yd-sdk",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Typed isomorphic Yandex Disk SDK",
   "main": "dist/index.js",
   "type": "module",
