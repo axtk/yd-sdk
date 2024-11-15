@@ -4,7 +4,7 @@
 
 ## Usage
 
-### Installation:
+### Installation
 
 ```
 npm i yd-sdk
