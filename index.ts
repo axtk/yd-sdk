@@ -44,4 +44,5 @@ export * from './src/types/util/ISODateString';
 export * from './src/types/util/PathString';
 export * from './src/types/util/URLString';
 export * from './src/utils/getOperationId';
+export * from './src/utils/isOperationLink';
 export * from './src/const/endpoint';
