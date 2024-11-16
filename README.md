@@ -107,19 +107,19 @@ else {
 }
 ```
 
-### `RequestQuery`
+### SDK types
 
-The `RequestQuery` generic type helps pick the query portion of the request schema entry:
+The `SDKInput` and `SDKOutput` (as well as `SDKResponse`) type namespaces contain the types for the corresponding methods:
 
 ```ts
-import type {GetResource, RequestQuery} from 'yd-sdk';
+import type {SDKInput} from 'yd-sdk';
 
-let params: RequestQuery<GetResource> = {
+let params: SDKInput.Public.Info = {
     path: '/',
     limit: 10,
 };
 
-let {ok, status, body} = await api.info(params);
+let {ok, status, body} = await api.public.info(params);
 ```
 
 ## See also
