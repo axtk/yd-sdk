@@ -85,6 +85,23 @@ api.trash.restore()    Restore from Trash
 
 The method parameters are the query parameters of the corresponding [API methods](https://yandex.com/dev/disk-api/doc/en/).
 
+## Types
+
+The type namespaces `SDKIn` and `SDKOut` (as well as `SDKResponse`) contain the types of the SDK methods. The types are named after the methods (in the title case):
+
+```ts
+import type {SDKIn} from 'yd-sdk';
+
+let params: SDKIn.Public.Info = {
+    path: '/',
+    limit: 10,
+};
+
+let {ok, status, body} = await api.public.info(params);
+// `body` is of type `SDKOut.Public.Info`
+// the entire response is of type `SDKResponse.Public.Info`
+```
+
 ## Utilities
 
 ### `isOperationLink()`, `getOperationId()`
@@ -105,21 +122,6 @@ if (isOperationLink(result)) {
 else {
     // use the processed resource `Link` object
 }
-```
-
-### SDK types
-
-The `SDKIn` and `SDKOut` (as well as `SDKResponse`) type namespaces contain the types for the corresponding methods:
-
-```ts
-import type {SDKIn} from 'yd-sdk';
-
-let params: SDKIn.Public.Info = {
-    path: '/',
-    limit: 10,
-};
-
-let {ok, status, body} = await api.public.info(params);
 ```
 
 ## See also
