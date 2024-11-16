@@ -25,7 +25,7 @@ type Query<T extends SchemaEntry> = PartialRequest<T, 'query'>;
 type ResBody<T extends SchemaEntry> = PartialResponse<T, 'body'>;
 type ResShape<T extends SchemaEntry> = ResponseShape<T['response']>;
 
-export namespace SDKIn {
+export namespace YDIn {
     export namespace Public {
         export type Info = Query<GetPublicResource>;
         export type List = Query<GetPublicResources>;
@@ -58,7 +58,7 @@ export namespace SDKIn {
     export type Update = SetCustomProperties['request'];
 }
 
-export namespace SDKOut {
+export namespace YDOut {
     export namespace Public {
         export type Info = ResBody<GetPublicResource>;
         export type List = ResBody<GetPublicResources>;
@@ -91,7 +91,7 @@ export namespace SDKOut {
     export type Update = ResBody<SetCustomProperties>;
 }
 
-export namespace SDKResponse {
+export namespace YDResponse {
     export namespace Public {
         export type Info = ResShape<GetPublicResource>;
         export type List = ResShape<GetPublicResources>;

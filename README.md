@@ -87,19 +87,19 @@ The method parameters are the query parameters of the corresponding [API methods
 
 ## Types
 
-The type namespaces `SDKIn` and `SDKOut` (as well as `SDKResponse`) contain the types of the SDK methods. The types are named after the methods (in the title case):
+The type namespaces `YDIn` and `YDOut` (as well as `YDResponse`) contain the types of the SDK methods. The types are named after the methods (in the title case):
 
 ```ts
-import type {SDKIn} from 'yd-sdk';
+import type {YDIn} from 'yd-sdk';
 
-let params: SDKIn.Public.Info = {
+let params: YDIn.Public.Info = {
     path: '/',
     limit: 10,
 };
 
 let {ok, status, body} = await api.public.info(params);
-// `body` is of type `SDKOut.Public.Info`
-// the entire response is of type `SDKResponse.Public.Info`
+// `body` is of type `YDOut.Public.Info`
+// the entire response is of type `YDResponse.Public.Info`
 ```
 
 ## Utilities
