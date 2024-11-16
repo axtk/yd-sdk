@@ -40,7 +40,7 @@ let api = sdk({
 });
 ```
 
-## API calls
+## API call examples
 
 ```ts
 let {ok, status, body: storageInfo} = await api.storage.info();
