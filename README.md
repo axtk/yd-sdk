@@ -89,7 +89,7 @@ The method parameters are the query parameters of the corresponding API methods.
 
 ### `isOperationLink()`, `getOperationId()`
 
-Some methods (like `.copy()` or `.move()`) return either a `Link` object pointing to the processed resource or an `OperationLink` object with a link to an operation in progress. The utility functions `isOperationLink()` and `getOperationId()` help handle API responses of these types.
+Some API methods (and the corresponding SDK methods, like `.copy()` or `.move()`) return either a `Link` object pointing to the processed resource or an `OperationLink` object with a link to an operation in progress. The utility functions `isOperationLink()` and `getOperationId()` help handle API responses of these types.
 
 ```ts
 import {isOperationLink, getOperationId} from 'yd-sdk';
