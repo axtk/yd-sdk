@@ -41,6 +41,7 @@ export * from './src/types/methods/UploadResource';
 export * from './src/types/util/CountryCode';
 export * from './src/types/util/DiskPathString';
 export * from './src/types/util/ISODateString';
+export * from './src/types/util/OperationId';
 export * from './src/types/util/PathString';
 export * from './src/types/util/URLString';
 export * from './src/utils/getOperationId';
