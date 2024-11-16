@@ -2,21 +2,19 @@
 
 *Typed isomorphic Yandex Disk SDK*
 
-## Usage
-
-### Installation
+## Installation
 
 ```
 npm i yd-sdk
 ```
 
-### Import
+## Import
 
 ```js
 import {sdk} from 'yd-sdk';
 ```
 
-### Initialization
+## Initialization
 
 ```js
 let api = sdk();
@@ -42,7 +40,7 @@ let api = sdk({
 });
 ```
 
-### API calls
+## API calls
 
 ```js
 let {ok, status, body: storageInfo} = await api.storage.info();
@@ -52,9 +50,11 @@ let {ok, status, body: storageInfo} = await api.storage.info();
 let {ok, status, body} = await api.info({path: '/', limit: 10});
 ```
 
-List of available methods with brief descriptions:
+## List of available methods
 
 ```
+Method                 Brief description
+
 api.public.info()      Get a public resource metadata
 api.public.list()      List public resources
 api.public.download()  Get a public resource download link
