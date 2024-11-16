@@ -12,6 +12,7 @@ export type ClearTrash = SchemaEntry<{
     response:
         | {
             status: 204;
+            body: undefined;
         }
         | {
             status: 202;

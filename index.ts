@@ -1,6 +1,6 @@
-export type {RequestQuery, RequestParams} from 'reqsrv';
 export * from './src/sdk';
 export * from './src/types/APISchema';
+export * from './src/types/SDKSchema';
 export * from './src/types/ServiceParams';
 export * from './src/types/TransformInput';
 export * from './src/types/entities/Disk';
