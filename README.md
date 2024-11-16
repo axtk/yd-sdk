@@ -10,19 +10,19 @@ npm i yd-sdk
 
 ## Import
 
-```js
+```ts
 import {sdk} from 'yd-sdk';
 ```
 
 ## Initialization
 
-```js
+```ts
 let api = sdk();
 ```
 
 or with an OAuth token required to access non-public resources:
 
-```js
+```ts
 let api = sdk({
     token: 'xxx',
 });
@@ -30,7 +30,7 @@ let api = sdk({
 
 or with a custom setup:
 
-```js
+```ts
 let api = sdk({
     token: 'xxx',
     endpoint: '/yd-api',
@@ -42,11 +42,11 @@ let api = sdk({
 
 ## API calls
 
-```js
+```ts
 let {ok, status, body: storageInfo} = await api.storage.info();
 ```
 
-```js
+```ts
 let {ok, status, body} = await api.info({path: '/', limit: 10});
 ```
 
@@ -82,6 +82,43 @@ api.trash.restore()    Restore from Trash
 ```
 
 The method parameters are the query parameters of the corresponding API methods.
+
+## Utilities
+
+### `isOperationLink()`, `getOperationId()`
+
+Some methods (like `.copy()` or `.move()`) return either a `Link` object pointing to the processed resource or an `OperationLink` object with a link to an operation in progress. The utility functions `isOperationLink()` and `getOperationId()` help handle API responses of these types.
+
+```ts
+import {isOperationLink, getOperationId} from 'yd-sdk';
+
+let {body: result} = await api.move({from: '/x', path: '/y'});
+
+if (isOperationLink(result)) {
+    let operationId = getOperationId(result);
+
+    // track the operation status with
+    // `await api.operation({id: operationId})`
+}
+else {
+    // use the processed resource `Link` object
+}
+```
+
+### `RequestQuery`
+
+The `RequestQuery` generic type helps pick the query portion of the request schema entry:
+
+```ts
+import type {GetResource, RequestQuery} from 'yd-sdk';
+
+let params: RequestQuery<GetResource> = {
+    path: '/',
+    limit: 10,
+};
+
+let {ok, status, body} = await api.info(params);
+```
 
 ## See also
 
