@@ -109,12 +109,12 @@ else {
 
 ### SDK types
 
-The `SDKInput` and `SDKOutput` (as well as `SDKResponse`) type namespaces contain the types for the corresponding methods:
+The `SDKIn` and `SDKOut` (as well as `SDKResponse`) type namespaces contain the types for the corresponding methods:
 
 ```ts
-import type {SDKInput} from 'yd-sdk';
+import type {SDKIn} from 'yd-sdk';
 
-let params: SDKInput.Public.Info = {
+let params: SDKIn.Public.Info = {
     path: '/',
     limit: 10,
 };
