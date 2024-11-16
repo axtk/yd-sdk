@@ -83,7 +83,7 @@ api.trash.clear()      Clear Trash or permanently delete a resource
 api.trash.restore()    Restore from Trash
 ```
 
-The method parameters are the query parameters of the corresponding [API methods](https://yandex.com/dev/disk-api/doc/en/).
+The method parameters are the query parameters of the corresponding [API methods](https://yandex.com/dev/disk-api/doc/en/). The only exception is the `api.update()` method requiring `{query, body}` as the parameter.
 
 ## Types
 
