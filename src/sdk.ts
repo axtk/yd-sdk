@@ -61,8 +61,10 @@ export function sdk(params: ServiceParams = {}) {
             upload: 'GET /disk/resources/upload',
             uploadFromURL: 'POST /disk/resources/upload',
             download: 'GET /disk/resources/download',
-            update: 'PATCH /disk/resources',
             operation: 'GET /disk/operations',
+        }),
+        ...service.assign({
+            update: 'PATCH /disk/resources',
         }),
         trash: service.assignQuery({
             clear: 'DELETE /disk/trash/resources',

@@ -4,7 +4,9 @@ import type {PathString} from '../util/PathString';
 
 export type PublishResource = SchemaEntry<{
     request: {
-        path: PathString;
+        query: {
+            path: PathString;
+        };
     };
     response: {
         body: Link;

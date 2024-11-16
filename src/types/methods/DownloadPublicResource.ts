@@ -4,8 +4,10 @@ import type {PathString} from '../util/PathString';
 
 export type DownloadPublicResource = SchemaEntry<{
     request: {
-        public_key: string;
-        path?: PathString;
+        query: {
+            public_key: string;
+            path?: PathString;
+        };
     };
     response: {
         body: Link;

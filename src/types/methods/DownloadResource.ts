@@ -5,8 +5,10 @@ import type {FieldList} from '../entities/FieldList';
 
 export type DownloadResource = SchemaEntry<{
     request: {
-        path: PathString;
-        fields?: FieldList;
+        query: {
+            path: PathString;
+            fields?: FieldList;
+        };
     };
     response: {
         body: Link;

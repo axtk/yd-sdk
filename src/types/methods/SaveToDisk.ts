@@ -5,9 +5,11 @@ import type {PathString} from '../util/PathString';
 
 export type SaveToDisk = SchemaEntry<{
     request: {
-        public_key: string;
-        path?: PathString;
-        name?: string;
+        query: {
+            public_key: string;
+            path?: PathString;
+            name?: string;
+        };
     };
     response:
         | {
