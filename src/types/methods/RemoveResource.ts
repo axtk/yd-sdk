@@ -16,7 +16,7 @@ export type RemoveResource = SchemaEntry<{
         // file or empty directory
         | {
             status: 204;
-            body: never;
+            body: undefined;
         }
         // non-empty directory
         | {
