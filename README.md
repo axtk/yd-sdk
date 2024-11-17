@@ -121,7 +121,7 @@ catch (error) {
 }
 ```
 
-With an API error (rather than, say, a response parsing error), the error object is supplied with a non-zero `status` value reflecting the HTTP status code and `data` of type `YDError` provided by the API.
+The API error object is supplied with a `status` value reflecting the HTTP status code and `data` provided by the API conforming to the `YDError` type.
 
 ## Utilities
 
