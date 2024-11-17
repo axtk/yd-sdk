@@ -59,16 +59,11 @@ export function getService(params: ServiceParams = {}) {
             throw new RequestError<ErrorShape>(errorParams);
         }
 
-        try {
-            return {
-                ok,
-                status,
-                statusText,
-                body: await response.json(),
-            };
-        }
-        catch (error) {
-            throw new RequestError(error);
-        }
+        return {
+            ok,
+            status,
+            statusText,
+            body: await response.json(),
+        };
     });
 }
