@@ -6,6 +6,7 @@ import {
     toStringValueMap,
 } from 'reqsrv';
 import {endpoint as defaultEndpoint} from '../const/endpoint';
+import type {Error as ErrorShape} from '../types/entities/Error';
 import type {APISchema} from '../types/APISchema';
 import type {ServiceParams} from '../types/ServiceParams';
 import type {TransformInput} from '../types/TransformInput';
@@ -45,7 +46,7 @@ export function getService(params: ServiceParams = {}) {
         let {ok, status, statusText} = response;
 
         if (!ok) {
-            let errorParams: RequestErrorParams = {
+            let errorParams: RequestErrorParams<ErrorShape> = {
                 status,
                 statusText,
             };
@@ -55,7 +56,7 @@ export function getService(params: ServiceParams = {}) {
             }
             catch {}
 
-            throw new RequestError(errorParams);
+            throw new RequestError<ErrorShape>(errorParams);
         }
 
         try {

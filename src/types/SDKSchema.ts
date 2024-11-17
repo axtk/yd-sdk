@@ -1,4 +1,5 @@
 import type {PartialRequest, PartialResponse, ResponseShape, SchemaEntry} from 'reqsrv';
+import type {Error as ErrorShape} from './entities/Error';
 import type {GetDisk} from './methods/GetDisk';
 import type {GetFlatFileList} from './methods/GetFlatFileList';
 import type {GetLastUploaded} from './methods/GetLastUploaded';
@@ -123,3 +124,5 @@ export namespace YDResponse {
     export type Operation = ResShape<GetOperation>;
     export type Update = ResShape<SetCustomProperties>;
 }
+
+export type YDError = ErrorShape;
