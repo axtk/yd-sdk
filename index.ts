@@ -1,15 +1,11 @@
-export {
-    RequestError,
-    RequestErrorParams,
-    getRequestAction,
-    toStringValueMap,
-} from 'reqsrv';
+export {getRequestAction, toStringValueMap} from 'reqsrv';
 export * from './src/sdk';
 export * from './src/types/APISchema';
 export * from './src/types/SDKSchema';
 export * from './src/types/ServiceParams';
 export * from './src/types/TransformInput';
 export * from './src/types/entities/Disk';
+export * from './src/types/entities/Error';
 export * from './src/types/entities/FieldList';
 export * from './src/types/entities/FileList';
 export * from './src/types/entities/Link';
@@ -52,4 +48,5 @@ export * from './src/types/util/PathString';
 export * from './src/types/util/URLString';
 export * from './src/utils/getOperationId';
 export * from './src/utils/isOperationLink';
+export * from './src/utils/RequestError';
 export * from './src/const/endpoint';

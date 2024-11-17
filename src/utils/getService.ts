@@ -1,6 +1,5 @@
 import {
     RequestService,
-    RequestError,
     RequestErrorParams,
     getRequestAction,
     toStringValueMap,
@@ -10,6 +9,7 @@ import type {Error as ErrorShape} from '../types/entities/Error';
 import type {APISchema} from '../types/APISchema';
 import type {ServiceParams} from '../types/ServiceParams';
 import type {TransformInput} from '../types/TransformInput';
+import {RequestError} from './RequestError';
 
 export function getService(params: ServiceParams = {}) {
     let transformInput: TransformInput;
@@ -56,7 +56,7 @@ export function getService(params: ServiceParams = {}) {
             }
             catch {}
 
-            throw new RequestError<ErrorShape>(errorParams);
+            throw new RequestError(errorParams);
         }
 
         return {
