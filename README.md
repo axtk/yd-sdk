@@ -102,6 +102,25 @@ let {ok, status, body} = await api.public.info(params);
 // the entire response is of type `YDResponse.Public.Info`
 ```
 
+## Error handling
+
+Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
+
+```ts
+import {RequestError} from 'yd-sdk';
+
+try {
+    let {body: dirInfo} = await api.info({path: '/x'});
+
+    // use the successfully retrieved resource data
+}
+catch (error) {
+    if (error instanceof RequestError && error.status === 404) {
+        // handle the missing resource error
+    }
+}
+```
+
 ## Utilities
 
 ### `isOperationLink()`, `getOperationId()`
@@ -121,25 +140,6 @@ if (isOperationLink(result)) {
 }
 else {
     // use the processed resource `Link` object
-}
-```
-
-### `RequestError`
-
-Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
-
-```ts
-import {RequestError} from 'yd-sdk';
-
-try {
-    let {body: dirInfo} = await api.info({path: '/x'});
-
-    // use the successfully retrieved resource data
-}
-catch (error) {
-    if (error instanceof RequestError && error.status === 404) {
-        // handle the missing resource error
-    }
 }
 ```
 
