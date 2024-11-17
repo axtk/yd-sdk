@@ -87,7 +87,7 @@ The method parameters are the query parameters of the corresponding [API methods
 
 ## Types
 
-The type namespaces `YDIn` and `YDOut` (as well as `YDResponse`) contain the types of the SDK methods. The types are named after the methods (in the title case):
+The type namespaces `YDIn`, `YDOut` and `YDResponse` contain the types of the SDK methods. The types within these namespaces are named after the methods:
 
 ```ts
 import type {YDIn} from 'yd-sdk';
@@ -121,7 +121,7 @@ catch (error) {
 }
 ```
 
-The API error object is supplied with a `status` value reflecting the HTTP status code and `data` provided by the API conforming to the `YDError` type.
+The API error object is supplied with a `status` value reflecting the HTTP status code and `data` of type `YDError` containing the error description provided by the API.
 
 ## Utilities
 
