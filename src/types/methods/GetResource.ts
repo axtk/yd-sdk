@@ -18,6 +18,7 @@ export type GetResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Partial<Resource>;
     };
 }>;

@@ -9,6 +9,7 @@ export type PublishResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Link;
     };
 }>;

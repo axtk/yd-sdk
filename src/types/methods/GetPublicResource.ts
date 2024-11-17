@@ -19,6 +19,7 @@ export type GetPublicResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Partial<Resource>;
     };
 }>;

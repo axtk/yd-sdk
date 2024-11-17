@@ -9,6 +9,7 @@ export type UnpublishResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Link;
     };
 }>;

@@ -6,6 +6,7 @@ export type GetDisk = SchemaEntry<{
         query: void;
     };
     response: {
+        status: 200;
         body: Disk;
     };
 }>;

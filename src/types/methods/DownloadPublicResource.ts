@@ -10,6 +10,7 @@ export type DownloadPublicResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Link;
     };
 }>;

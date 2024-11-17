@@ -14,6 +14,7 @@ export type SetCustomProperties = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Partial<Resource>;
     };
 }>;

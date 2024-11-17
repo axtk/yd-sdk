@@ -8,6 +8,7 @@ export type GetOperation = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: {
             status: OperationStatus;
         };

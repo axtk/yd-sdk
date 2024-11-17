@@ -13,6 +13,7 @@ export type UploadResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         /** Upload target link */
         body: Link;
     };

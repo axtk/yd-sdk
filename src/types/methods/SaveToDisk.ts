@@ -13,7 +13,7 @@ export type SaveToDisk = SchemaEntry<{
     };
     response:
         | {
-            status: 200;
+            status: 201;
             body: Link;
         }
         | {

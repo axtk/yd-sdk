@@ -11,6 +11,7 @@ export type DownloadResource = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Link;
     };
 }>;

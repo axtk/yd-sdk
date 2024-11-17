@@ -16,6 +16,7 @@ export type GetFlatFileList = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: FileList;
     };
 }>;

@@ -15,7 +15,7 @@ export type UploadRemoteResource = SchemaEntry<{
         };
     };
     response: {
-        status: 202,
+        status: 202;
         body: OperationLink;
     };
 }>;

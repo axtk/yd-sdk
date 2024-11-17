@@ -11,9 +11,7 @@ export type CreateResource = SchemaEntry<{
         };
     };
     response: {
-        body: {
-            status: 201;
-            body: Link;
-        };
+        status: 201;
+        body: Link;
     };
 }>;

@@ -15,6 +15,7 @@ export type GetLastUploaded = SchemaEntry<{
         };
     };
     response: {
+        status: 200;
         body: Omit<FileList, 'offset'>;
     };
 }>;
