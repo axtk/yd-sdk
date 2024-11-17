@@ -124,6 +124,25 @@ else {
 }
 ```
 
+### `RequestError`
+
+Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
+
+```ts
+import {RequestError} from 'yd-sdk';
+
+try {
+    let {body: dirInfo} = await api.info({path: '/x'});
+
+    // use the successfully retrieved resource data
+}
+catch (error) {
+    if (error instanceof RequestError && error.status === 404) {
+        // handle the missing resource error
+    }
+}
+```
+
 ## See also
 
 &rarr; [*Yandex Disk API Docs*](https://yandex.com/dev/disk-api/doc/en/)
