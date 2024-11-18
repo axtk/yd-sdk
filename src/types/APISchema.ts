@@ -22,10 +22,10 @@ import type {ClearTrash} from './methods/ClearTrash';
 import type {RestoreFromTrash} from './methods/RestoreFromTrash';
 
 export type APISchema = Schema<{
-    'GET /disk': GetDisk,
-    'GET /disk/resources/files': GetFlatFileList,
-    'GET /disk/resources/last-uploaded': GetLastUploaded,
-    'GET /disk/resources': GetResource,
+    'GET /disk': GetDisk;
+    'GET /disk/resources/files': GetFlatFileList;
+    'GET /disk/resources/last-uploaded': GetLastUploaded;
+    'GET /disk/resources': GetResource;
     'GET /disk/resources/public': GetPublicResources;
     'GET /disk/public/resources': GetPublicResource;
     'GET /disk/public/resources/download': DownloadPublicResource;
@@ -35,12 +35,12 @@ export type APISchema = Schema<{
     'POST /disk/resources/copy': CopyResource;
     'POST /disk/resources/move': MoveResource;
     'DELETE /disk/resources': RemoveResource;
-    'PUT /disk/resources': CreateResource,
-    'GET /disk/resources/upload': UploadResource,
-    'POST /disk/resources/upload': UploadRemoteResource,
-    'GET /disk/resources/download': DownloadResource,
-    'PATCH /disk/resources': SetCustomProperties,
-    'GET /disk/operations': GetOperation,
-    'DELETE /disk/trash/resources': ClearTrash,
-    'PUT /disk/trash/resources/restore': RestoreFromTrash,
+    'PUT /disk/resources': CreateResource;
+    'GET /disk/resources/upload': UploadResource;
+    'POST /disk/resources/upload': UploadRemoteResource;
+    'GET /disk/resources/download': DownloadResource;
+    'PATCH /disk/resources': SetCustomProperties;
+    'GET /disk/operations': GetOperation;
+    'DELETE /disk/trash/resources': ClearTrash;
+    'PUT /disk/trash/resources/restore': RestoreFromTrash;
 }>;
