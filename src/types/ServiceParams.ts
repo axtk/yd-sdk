@@ -1,4 +1,4 @@
-import type {TransformInput} from './TransformInput';
+import type {TransformInput} from 'reqsrv';
 
 export type ServiceParams = {
     token?: string;

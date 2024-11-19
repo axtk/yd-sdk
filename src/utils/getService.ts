@@ -1,6 +1,7 @@
 import {
     RequestService,
     RequestErrorParams,
+    TransformInput,
     getRequestAction,
     toStringValueMap,
 } from 'reqsrv';
@@ -8,7 +9,6 @@ import {endpoint as defaultEndpoint} from '../const/endpoint';
 import type {Error as ErrorShape} from '../types/entities/Error';
 import type {APISchema} from '../types/APISchema';
 import type {ServiceParams} from '../types/ServiceParams';
-import type {TransformInput} from '../types/TransformInput';
 import {RequestError} from './RequestError';
 
 export function getService(params: ServiceParams = {}) {
