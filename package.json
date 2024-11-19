@@ -25,6 +25,6 @@
     "esbuild": "^0.24.0"
   },
   "dependencies": {
-    "reqsrv": "^4.5.13"
+    "reqsrv": "^4.5.15"
   }
 }
