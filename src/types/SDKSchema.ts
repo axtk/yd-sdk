@@ -1,26 +1,26 @@
 import type {PartialRequest, PartialResponse, ResponseShape, SchemaEntry} from 'reqsrv';
 import type {Error as ErrorShape} from './entities/Error';
+import type {ClearTrash} from './methods/ClearTrash';
+import type {CopyResource} from './methods/CopyResource';
+import type {CreateResource} from './methods/CreateResource';
+import type {DownloadPublicResource} from './methods/DownloadPublicResource';
+import type {DownloadResource} from './methods/DownloadResource';
 import type {GetDisk} from './methods/GetDisk';
 import type {GetFlatFileList} from './methods/GetFlatFileList';
 import type {GetLastUploaded} from './methods/GetLastUploaded';
-import type {GetResource} from './methods/GetResource';
-import type {GetPublicResources} from './methods/GetPublicResources';
-import type {GetPublicResource} from './methods/GetPublicResource';
-import type {DownloadPublicResource} from './methods/DownloadPublicResource';
-import type {SaveToDisk} from './methods/SaveToDisk';
-import type {PublishResource} from './methods/PublishResource';
-import type {UnpublishResource} from './methods/UnpublishResource';
-import type {CopyResource} from './methods/CopyResource';
-import type {MoveResource} from './methods/MoveResource';
-import type {RemoveResource} from './methods/RemoveResource';
-import type {CreateResource} from './methods/CreateResource';
-import type {UploadResource} from './methods/UploadResource';
-import type {UploadRemoteResource} from './methods/UploadRemoteResource';
-import type {DownloadResource} from './methods/DownloadResource';
-import type {SetCustomProperties} from './methods/SetCustomProperties';
 import type {GetOperation} from './methods/GetOperation';
-import type {ClearTrash} from './methods/ClearTrash';
+import type {GetPublicResource} from './methods/GetPublicResource';
+import type {GetPublicResources} from './methods/GetPublicResources';
+import type {GetResource} from './methods/GetResource';
+import type {MoveResource} from './methods/MoveResource';
+import type {PublishResource} from './methods/PublishResource';
+import type {RemoveResource} from './methods/RemoveResource';
 import type {RestoreFromTrash} from './methods/RestoreFromTrash';
+import type {SaveToDisk} from './methods/SaveToDisk';
+import type {SetCustomProperties} from './methods/SetCustomProperties';
+import type {UnpublishResource} from './methods/UnpublishResource';
+import type {UploadRemoteResource} from './methods/UploadRemoteResource';
+import type {UploadResource} from './methods/UploadResource';
 
 type Query<T extends SchemaEntry> = PartialRequest<T, 'query'>;
 type ResBody<T extends SchemaEntry> = PartialResponse<T, 'body'>;
@@ -38,11 +38,6 @@ export namespace YDIn {
         export type Info = Query<GetDisk>;
     }
 
-    export namespace Trash {
-        export type Clear = Query<ClearTrash>;
-        export type Restore = Query<RestoreFromTrash>;
-    }
-
     export type Info = Query<GetResource>;
     export type List = Query<GetFlatFileList>;
     export type Recent = Query<GetLastUploaded>;
@@ -57,6 +52,11 @@ export namespace YDIn {
     export type Download = Query<DownloadResource>;
     export type Operation = Query<GetOperation>;
     export type Update = SetCustomProperties['request'];
+
+    export namespace Trash {
+        export type Clear = Query<ClearTrash>;
+        export type Restore = Query<RestoreFromTrash>;
+    }
 }
 
 export namespace YDOut {
@@ -69,11 +69,6 @@ export namespace YDOut {
 
     export namespace Storage {
         export type Info = ResBody<GetDisk>;
-    }
-
-    export namespace Trash {
-        export type Clear = ResBody<ClearTrash>;
-        export type Restore = ResBody<RestoreFromTrash>;
     }
 
     export type Info = ResBody<GetResource>;
@@ -90,6 +85,11 @@ export namespace YDOut {
     export type Download = ResBody<DownloadResource>;
     export type Operation = ResBody<GetOperation>;
     export type Update = ResBody<SetCustomProperties>;
+
+    export namespace Trash {
+        export type Clear = ResBody<ClearTrash>;
+        export type Restore = ResBody<RestoreFromTrash>;
+    }
 }
 
 export namespace YDResponse {
@@ -102,11 +102,6 @@ export namespace YDResponse {
 
     export namespace Storage {
         export type Info = ResShape<GetDisk>;
-    }
-
-    export namespace Trash {
-        export type Clear = ResShape<ClearTrash>;
-        export type Restore = ResShape<RestoreFromTrash>;
     }
 
     export type Info = ResShape<GetResource>;
@@ -123,6 +118,11 @@ export namespace YDResponse {
     export type Download = ResShape<DownloadResource>;
     export type Operation = ResShape<GetOperation>;
     export type Update = ResShape<SetCustomProperties>;
+
+    export namespace Trash {
+        export type Clear = ResShape<ClearTrash>;
+        export type Restore = ResShape<RestoreFromTrash>;
+    }
 }
 
 export type YDError = ErrorShape;
