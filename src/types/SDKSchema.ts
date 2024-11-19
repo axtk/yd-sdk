@@ -1,4 +1,4 @@
-import type {PartialRequest, PartialResponse, ResponseShape, SchemaEntry} from 'reqsrv';
+import type {ReqQuery, ReqShape, ResBody, ResShape} from 'reqsrv';
 import type {Error as ErrorShape} from './entities/Error';
 import type {ClearTrash} from './methods/ClearTrash';
 import type {CopyResource} from './methods/CopyResource';
@@ -22,40 +22,36 @@ import type {UnpublishResource} from './methods/UnpublishResource';
 import type {UploadRemoteResource} from './methods/UploadRemoteResource';
 import type {UploadResource} from './methods/UploadResource';
 
-type Query<T extends SchemaEntry> = PartialRequest<T, 'query'>;
-type ResBody<T extends SchemaEntry> = PartialResponse<T, 'body'>;
-type ResShape<T extends SchemaEntry> = ResponseShape<T['response']>;
-
 export namespace YDIn {
     export namespace Public {
-        export type Info = Query<GetPublicResource>;
-        export type List = Query<GetPublicResources>;
-        export type Download = Query<DownloadPublicResource>;
-        export type Save = Query<SaveToDisk>;
+        export type Info = ReqQuery<GetPublicResource>;
+        export type List = ReqQuery<GetPublicResources>;
+        export type Download = ReqQuery<DownloadPublicResource>;
+        export type Save = ReqQuery<SaveToDisk>;
     }
 
     export namespace Storage {
-        export type Info = Query<GetDisk>;
+        export type Info = ReqQuery<GetDisk>;
     }
 
-    export type Info = Query<GetResource>;
-    export type List = Query<GetFlatFileList>;
-    export type Recent = Query<GetLastUploaded>;
-    export type Create = Query<CreateResource>;
-    export type Copy = Query<CopyResource>;
-    export type Move = Query<MoveResource>;
-    export type Remove = Query<RemoveResource>;
-    export type Publish = Query<PublishResource>;
-    export type Unpublish = Query<UnpublishResource>;
-    export type Upload = Query<UploadResource>;
-    export type UploadFromURL = Query<UploadRemoteResource>;
-    export type Download = Query<DownloadResource>;
-    export type Operation = Query<GetOperation>;
-    export type Update = SetCustomProperties['request'];
+    export type Info = ReqQuery<GetResource>;
+    export type List = ReqQuery<GetFlatFileList>;
+    export type Recent = ReqQuery<GetLastUploaded>;
+    export type Create = ReqQuery<CreateResource>;
+    export type Copy = ReqQuery<CopyResource>;
+    export type Move = ReqQuery<MoveResource>;
+    export type Remove = ReqQuery<RemoveResource>;
+    export type Publish = ReqQuery<PublishResource>;
+    export type Unpublish = ReqQuery<UnpublishResource>;
+    export type Upload = ReqQuery<UploadResource>;
+    export type UploadFromURL = ReqQuery<UploadRemoteResource>;
+    export type Download = ReqQuery<DownloadResource>;
+    export type Operation = ReqQuery<GetOperation>;
+    export type Update = ReqShape<SetCustomProperties>;
 
     export namespace Trash {
-        export type Clear = Query<ClearTrash>;
-        export type Restore = Query<RestoreFromTrash>;
+        export type Clear = ReqQuery<ClearTrash>;
+        export type Restore = ReqQuery<RestoreFromTrash>;
     }
 }
 
