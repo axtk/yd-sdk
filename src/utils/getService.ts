@@ -17,7 +17,7 @@ export function getService(params: ServiceParams = {}) {
     if ('transformInput' in params)
         transformInput = params.transformInput;
     else {
-        transformInput = ({request, target}) => {
+        transformInput = ({target, request}) => {
             let {method, url} = getRequestAction({
                 request,
                 target,
@@ -38,9 +38,9 @@ export function getService(params: ServiceParams = {}) {
         };
     }
 
-    return new RequestService<APISchema>(async (target, request = {}) => {
+    return new RequestService<APISchema>(async (target, request) => {
         let response = await fetch(
-            ...transformInput({request, target}),
+            ...transformInput({target, request}),
         );
 
         let {ok, status, statusText} = response;
