@@ -45,12 +45,35 @@ let api = sdk({
 ## API call examples
 
 ```ts
-let {ok, status, body: storageInfo} = await api.storage.info();
+let {status, body: storageInfo} = await api.storage.info();
 ```
 
 ```ts
-let {ok, status, body} = await api.info({path: '/', limit: 10});
+let {status, body} = await api.info({path: '/', limit: 10});
 ```
+
+All successful API calls resolve with an object containing `status` reflecting the HTTP status code (along with a corresponding `statusText`) and `body` holding the data returned from the API.
+
+## Error handling
+
+Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
+
+```ts
+import {RequestError} from 'yd-sdk';
+
+try {
+    let {body: dirInfo} = await api.info({path: '/x'});
+
+    // use the successfully retrieved resource data
+}
+catch (error) {
+    if (error instanceof RequestError && error.status === 404) {
+        // handle the missing resource error
+    }
+}
+```
+
+The API error object is supplied with a `status` value reflecting the HTTP status code and `data` of type `YDError` containing the error description provided by the API.
 
 ## List of available methods
 
@@ -97,31 +120,10 @@ let params: YDIn.Public.Info = {
     limit: 10,
 };
 
-let {ok, status, body} = await api.public.info(params);
+let {status, body} = await api.public.info(params);
 // `body` is of type `YDOut.Public.Info`
 // the entire response is of type `YDResponse.Public.Info`
 ```
-
-## Error handling
-
-Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
-
-```ts
-import {RequestError} from 'yd-sdk';
-
-try {
-    let {body: dirInfo} = await api.info({path: '/x'});
-
-    // use the successfully retrieved resource data
-}
-catch (error) {
-    if (error instanceof RequestError && error.status === 404) {
-        // handle the missing resource error
-    }
-}
-```
-
-The API error object is supplied with a `status` value reflecting the HTTP status code and `data` of type `YDError` containing the error description provided by the API.
 
 ## Utilities
 
