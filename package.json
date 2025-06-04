@@ -22,9 +22,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
-    "esbuild": "^0.24.0"
+    "esbuild": "^0.25.5"
   },
   "dependencies": {
-    "reqsrv": "^4.5.15"
+    "reqsrv": "^4.6.2"
   }
 }

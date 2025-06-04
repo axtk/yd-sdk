@@ -39,16 +39,16 @@ export function sdk(params: ServiceParams = {}) {
     let service = getService(params);
 
     return {
-        public: service.assignQuery({
+        public: service.getQueryEntry({
             info: 'GET /disk/public/resources',
             list: 'GET /disk/resources/public',
             download: 'GET /disk/public/resources/download',
             save: 'POST /disk/public/resources/save-to-disk',
         }),
-        storage: service.assignQuery({
+        storage: service.getQueryEntry({
             info: 'GET /disk',
         }),
-        ...service.assignQuery({
+        ...service.getQueryEntry({
             info: 'GET /disk/resources',
             list: 'GET /disk/resources/files',
             recent: 'GET /disk/resources/last-uploaded',
@@ -63,10 +63,10 @@ export function sdk(params: ServiceParams = {}) {
             download: 'GET /disk/resources/download',
             operation: 'GET /disk/operations',
         }),
-        ...service.assign({
+        ...service.getEntry({
             update: 'PATCH /disk/resources',
         }),
-        trash: service.assignQuery({
+        trash: service.getQueryEntry({
             clear: 'DELETE /disk/trash/resources',
             restore: 'PUT /disk/trash/resources/restore',
         }),
