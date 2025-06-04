@@ -13,8 +13,11 @@
   "author": "axtk",
   "license": "ISC",
   "keywords": [
+    "yandex-disk",
+    "api",
+    "typed api",
     "sdk",
-    "yandex-disk"
+    "typed sdk"
   ],
   "repository": {
     "type": "git",
