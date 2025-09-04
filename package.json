@@ -29,6 +29,6 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "reqsrv": "^4.6.2"
+    "reqsrv": "^4.6.4"
   }
 }
