@@ -8,7 +8,8 @@
     "build": "npx esbuild index.ts --bundle --outfile=dist/index.js --platform=neutral",
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
     "prepublishOnly": "npm run build",
-    "preversion": "npm run build"
+    "preversion": "npx npm-run-all typecheck build",
+    "typecheck": "tsc --noEmit"
   },
   "author": "axtk",
   "license": "ISC",
@@ -24,7 +25,8 @@
     "url": "git+https://github.com/axtk/yd-sdk.git"
   },
   "devDependencies": {
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.0",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "reqsrv": "^4.6.2"
