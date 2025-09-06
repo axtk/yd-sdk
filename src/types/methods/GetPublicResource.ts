@@ -1,4 +1,4 @@
-import type {SchemaEntry} from 'reqsrv';
+import type {SchemaEntry} from '@t8/sdk-factory';
 import type {FieldList} from '../entities/FieldList';
 import type {Resource} from '../entities/Resource';
 import type {Sort} from '../entities/Sort';

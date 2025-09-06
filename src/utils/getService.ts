@@ -4,7 +4,7 @@ import {
     TransformInput,
     getRequestAction,
     toStringValueMap,
-} from 'reqsrv';
+} from '@t8/sdk-factory';
 import {endpoint as defaultEndpoint} from '../const/endpoint';
 import type {Error as ErrorShape} from '../types/entities/Error';
 import type {APISchema} from '../types/APISchema';

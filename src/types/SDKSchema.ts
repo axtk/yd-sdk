@@ -1,4 +1,4 @@
-import type {ReqQuery, ReqShape, ResBody, ResShape} from 'reqsrv';
+import type {ReqQuery, ReqShape, ResBody, ResShape} from '@t8/sdk-factory';
 import type {Error as ErrorShape} from './entities/Error';
 import type {ClearTrash} from './methods/ClearTrash';
 import type {CopyResource} from './methods/CopyResource';

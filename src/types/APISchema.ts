@@ -1,4 +1,4 @@
-import type {Schema} from 'reqsrv';
+import type {Schema} from '@t8/sdk-factory';
 import type {GetDisk} from './methods/GetDisk';
 import type {GetFlatFileList} from './methods/GetFlatFileList';
 import type {GetLastUploaded} from './methods/GetLastUploaded';

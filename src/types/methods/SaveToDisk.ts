@@ -1,4 +1,4 @@
-import type {SchemaEntry} from 'reqsrv';
+import type {SchemaEntry} from '@t8/sdk-factory';
 import type {Link} from '../entities/Link';
 import type {OperationLink} from '../entities/OperationLink';
 import type {PathString} from '../util/PathString';

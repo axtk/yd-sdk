@@ -1,4 +1,4 @@
-export {getRequestAction, toStringValueMap, TransformInput} from 'reqsrv';
+export {getRequestAction, toStringValueMap, TransformInput} from '@t8/sdk-factory';
 export * from './src/sdk';
 export * from './src/types/APISchema';
 export * from './src/types/SDKSchema';

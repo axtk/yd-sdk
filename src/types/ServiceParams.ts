@@ -1,4 +1,4 @@
-import type {TransformInput} from 'reqsrv';
+import type {TransformInput} from '@t8/sdk-factory';
 
 export type ServiceParams = {
     token?: string;
