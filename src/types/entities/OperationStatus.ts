@@ -1,4 +1,1 @@
-export type OperationStatus =
-    | 'success'
-    | 'failed'
-    | 'in-progress';
+export type OperationStatus = "success" | "failed" | "in-progress";

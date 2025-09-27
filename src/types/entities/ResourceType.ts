@@ -1,1 +1,1 @@
-export type ResourceType = 'file' | 'dir';
+export type ResourceType = "file" | "dir";

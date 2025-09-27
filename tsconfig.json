@@ -1,12 +1,12 @@
 {
-    "include": ["src", "index.ts"],
-    "compilerOptions": {
-        "lib": ["ESNext", "DOM"],
-        "target": "ESNext",
-        "outDir": "dist",
-        "moduleResolution": "node",
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true
-    }
+  "include": ["src", "index.ts"],
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
 }
