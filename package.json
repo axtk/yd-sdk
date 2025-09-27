@@ -8,7 +8,8 @@
     "build": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
     "prepublishOnly": "npm run build",
-    "preversion": "npx npm-run-all typecheck build",
+    "preversion": "npx npm-run-all typecheck shape build",
+    "shape": "npx codeshape",
     "typecheck": "tsc --noEmit"
   },
   "author": "axtk",
