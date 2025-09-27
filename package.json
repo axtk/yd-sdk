@@ -30,6 +30,6 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@t8/sdk-factory": "^1.0.0"
+    "@t8/sdk-factory": "^1.0.1"
   }
 }
