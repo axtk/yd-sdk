@@ -9,7 +9,7 @@ Installation: `npm i yd-sdk`
 ## Initialization
 
 ```ts
-import {sdk} from 'yd-sdk';
+import { sdk } from "yd-sdk";
 
 let api = sdk();
 ```
@@ -18,7 +18,7 @@ or with an OAuth token required to access non-public resources:
 
 ```ts
 let api = sdk({
-    token: 'xxx',
+  token: "xxx",
 });
 ```
 
@@ -26,22 +26,22 @@ or with a custom setup:
 
 ```ts
 let api = sdk({
-    token: 'xxx',
-    endpoint: '/yd-api',
-    headers: {
-        'x-csrf-token': 'xxx',
-    },
+  token: "xxx",
+  endpoint: "/yd-api",
+  headers: {
+    "x-csrf-token": "xxx",
+  },
 });
 ```
 
 ## API call examples
 
 ```ts
-let {status, body: storageInfo} = await api.storage.info();
+let { status, body: storageInfo } = await api.storage.info();
 ```
 
 ```ts
-let {status, body} = await api.info({path: '/', limit: 10});
+let { status, body } = await api.info({ path: "/", limit: 10 });
 ```
 
 All successful API calls resolve with an object containing `status` reflecting the HTTP status code (along with a corresponding `statusText`) and `body` holding the data returned from the API.
@@ -51,17 +51,17 @@ All successful API calls resolve with an object containing `status` reflecting t
 Whenever an SDK method encounters an API error, the method throws an instance of `RequestError`.
 
 ```ts
-import {RequestError} from 'yd-sdk';
+import { RequestError } from "yd-sdk";
 
 try {
-    let {body: dirInfo} = await api.info({path: '/x'});
+  let { body: dirInfo } = await api.info({ path: "/x" });
 
-    // use the successfully retrieved resource data
+  // use the successfully retrieved resource data
 }
 catch (error) {
-    if (error instanceof RequestError && error.status === 404) {
-        // handle the missing resource error
-    }
+  if (error instanceof RequestError && error.status === 404) {
+    // handle the missing resource error
+  }
 }
 ```
 
@@ -98,21 +98,21 @@ api.trash.clear()      Clear Trash or permanently delete a resource
 api.trash.restore()    Restore from Trash
 ```
 
-The method parameters are the query parameters of the corresponding [API methods](https://yandex.com/dev/disk-api/doc/en/). The only exception is the `api.update()` method requiring `{query, body}` as the parameter.
+The method parameters are the query parameters of the corresponding [API methods](https://yandex.com/dev/disk-api/doc/en/). The only exception is the `api.update()` method requiring `{ query, body }` as the parameter.
 
 ## Types
 
 The type namespaces `YDIn`, `YDOut` and `YDResponse` contain the types of the SDK methods. The types within these namespaces are named after the methods:
 
 ```ts
-import type {YDIn} from 'yd-sdk';
+import type { YDIn } from "yd-sdk";
 
 let params: YDIn.Public.Info = {
-    path: '/',
-    limit: 10,
+  path: "/",
+  limit: 10,
 };
 
-let {status, body} = await api.public.info(params);
+let { status, body } = await api.public.info(params);
 // `body` is of type `YDOut.Public.Info`
 // the entire response is of type `YDResponse.Public.Info`
 ```
@@ -124,18 +124,18 @@ let {status, body} = await api.public.info(params);
 Some API methods (and the corresponding SDK methods, like `.copy()` or `.move()`) return either a `Link` object pointing to the processed resource or an `OperationLink` object with a link to an operation in progress. The utility functions `isOperationLink()` and `getOperationId()` help handle API responses of these types.
 
 ```ts
-import {isOperationLink, getOperationId} from 'yd-sdk';
+import { isOperationLink, getOperationId } from "yd-sdk";
 
-let {body: result} = await api.move({from: '/x', path: '/y'});
+let { body: result } = await api.move({ from: "/x", path: "/y" });
 
 if (isOperationLink(result)) {
-    let operationId = getOperationId(result);
+  let operationId = getOperationId(result);
 
-    // track the operation status with
-    // `await api.operation({id: operationId})`
+  // track the operation status with
+  // `await api.operation({ id: operationId })`
 }
 else {
-    // use the processed resource `Link` object
+  // use the processed resource `Link` object
 }
 ```
 
