@@ -11,28 +11,28 @@ import { getService } from "./utils/getService";
  *
  * @example
  * ```
- * let api = sdk({token: 'xxx'});
+ * let api = sdk({ token: "xxx" });
  * ```
  *
  * @example
  * ```
  * let api = sdk({
- *     token: 'xxx',
- *     endpoint: '/yd-api',
- *     headers: {
- *         'x-csrf-token': 'xxx',
- *     },
+ *   token: "xxx",
+ *   endpoint: "/yd-api",
+ *   headers: {
+ *     "x-csrf-token": "xxx",
+ *   },
  * });
  * ```
  *
  * @example
  * ```
- * let {ok, status, body: storageInfo} = await api.storage.info();
+ * let { ok, status, body: storageInfo } = await api.storage.info();
  * ```
  *
  * @example
  * ```
- * let {ok, status, body} = await api.info({path: '/', limit: 10});
+ * let { ok, status, body } = await api.info({ path: "/", limit: 10 });
  * ```
  */
 export function sdk(params: ServiceParams = {}) {
