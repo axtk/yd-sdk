@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "author": "axtk",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "yandex-disk",
     "api",
