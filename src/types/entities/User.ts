@@ -1,5 +1,5 @@
-import type { CountryCode } from "../util/CountryCode";
-import type { ISODateString } from "../util/ISODateString";
+import type { CountryCode } from "../util/CountryCode.ts";
+import type { ISODateString } from "../util/ISODateString.ts";
 
 export type User = {
   uid: string;

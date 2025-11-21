@@ -1,7 +1,7 @@
 import type { SchemaEntry } from "@t8/sdk-factory";
-import type { Link } from "../entities/Link";
-import type { OperationLink } from "../entities/OperationLink";
-import type { PathString } from "../util/PathString";
+import type { Link } from "../entities/Link.ts";
+import type { OperationLink } from "../entities/OperationLink.ts";
+import type { PathString } from "../util/PathString.ts";
 
 export type RestoreFromTrash = SchemaEntry<{
   request: {

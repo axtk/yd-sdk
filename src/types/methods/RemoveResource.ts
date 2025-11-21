@@ -1,7 +1,7 @@
 import type { SchemaEntry } from "@t8/sdk-factory";
-import type { FieldList } from "../entities/FieldList";
-import type { OperationLink } from "../entities/OperationLink";
-import type { PathString } from "../util/PathString";
+import type { FieldList } from "../entities/FieldList.ts";
+import type { OperationLink } from "../entities/OperationLink.ts";
+import type { PathString } from "../util/PathString.ts";
 
 export type RemoveResource = SchemaEntry<{
   request: {

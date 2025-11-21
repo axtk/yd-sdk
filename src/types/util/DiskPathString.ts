@@ -1,6 +1,6 @@
 /**
- * Resource path prefixed with 'disk:'.
+ * Resource path prefixed with "disk:".
  *
- * @example 'disk:/Downloads'
+ * @example "disk:/Downloads"
  */
 export type DiskPathString = string;

@@ -1,4 +1,4 @@
-import type { OperationLink } from "../types/entities/OperationLink";
+import type { OperationLink } from "../types/entities/OperationLink.ts";
 
 export function isOperationLink(x: unknown): x is OperationLink {
   if (

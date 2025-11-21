@@ -1,4 +1,4 @@
-import type { URLString } from "../util/URLString";
+import type { URLString } from "../util/URLString.ts";
 
 export type Link = {
   href: URLString;

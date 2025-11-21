@@ -1,5 +1,5 @@
-import type { ServiceParams } from "./types/ServiceParams";
-import { getService } from "./utils/getService";
+import type { ServiceParams } from "./types/ServiceParams.ts";
+import { getService } from "./utils/getService.ts";
 
 /**
  * Creates an entrypoint to the API.

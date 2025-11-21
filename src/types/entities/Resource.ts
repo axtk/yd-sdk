@@ -1,7 +1,7 @@
-import type { ResourceItem } from "./ResourceItem";
-import type { ResourceList } from "./ResourceList";
-import type { ResourceType } from "./ResourceType";
-import type { User } from "./User";
+import type { ResourceItem } from "./ResourceItem.ts";
+import type { ResourceList } from "./ResourceList.ts";
+import type { ResourceType } from "./ResourceType.ts";
+import type { User } from "./User.ts";
 
 export type Resource<T extends ResourceType = ResourceType> =
   ResourceItem<T> & {

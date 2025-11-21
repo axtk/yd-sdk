@@ -5,11 +5,11 @@ import {
   type TransformInput,
   toStringValueMap,
 } from "@t8/sdk-factory";
-import { endpoint as defaultEndpoint } from "../const/endpoint";
-import type { APISchema } from "../types/APISchema";
-import type { Error as ErrorShape } from "../types/entities/Error";
-import type { ServiceParams } from "../types/ServiceParams";
-import { RequestError } from "./RequestError";
+import { endpoint as defaultEndpoint } from "../const/endpoint.ts";
+import type { APISchema } from "../types/APISchema.ts";
+import type { Error as ErrorShape } from "../types/entities/Error.ts";
+import type { ServiceParams } from "../types/ServiceParams.ts";
+import { RequestError } from "./RequestError.ts";
 
 export function getService(params: ServiceParams = {}) {
   let transformInput: TransformInput;

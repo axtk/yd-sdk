@@ -3,14 +3,16 @@
   "version": "1.1.28",
   "description": "Typed isomorphic Yandex Disk SDK",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
     "prepublishOnly": "npm run build",
-    "preversion": "npx npm-run-all typecheck shape build",
+    "preversion": "npx npm-run-all typecheck shape build types",
     "shape": "npx codeshape",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "types": "tsc --emitDeclarationOnly"
   },
   "author": "axtk",
   "license": "MIT",
@@ -30,6 +32,6 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@t8/sdk-factory": "^1.0.4"
+    "@t8/sdk-factory": "^1.0.8"
   }
 }

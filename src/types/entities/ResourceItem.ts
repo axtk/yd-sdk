@@ -1,6 +1,6 @@
-import type { ISODateString } from "../util/ISODateString";
-import type { URLString } from "../util/URLString";
-import type { ResourceType } from "./ResourceType";
+import type { ISODateString } from "../util/ISODateString.ts";
+import type { URLString } from "../util/URLString.ts";
+import type { ResourceType } from "./ResourceType.ts";
 
 export type ResourceItem<T extends ResourceType = ResourceType> = {
   public_key?: string;

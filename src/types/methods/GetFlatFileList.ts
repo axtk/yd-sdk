@@ -1,7 +1,7 @@
 import type { SchemaEntry } from "@t8/sdk-factory";
-import type { FieldList } from "../entities/FieldList";
-import type { FileList } from "../entities/FileList";
-import type { MediaType } from "../entities/MediaType";
+import type { FieldList } from "../entities/FieldList.ts";
+import type { FileList } from "../entities/FileList.ts";
+import type { MediaType } from "../entities/MediaType.ts";
 
 export type GetFlatFileList = SchemaEntry<{
   request: void | {

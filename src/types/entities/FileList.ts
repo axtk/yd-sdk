@@ -1,4 +1,4 @@
-import type { ResourceItem } from "./ResourceItem";
+import type { ResourceItem } from "./ResourceItem.ts";
 
 export type FileList = {
   items: Partial<ResourceItem>[];

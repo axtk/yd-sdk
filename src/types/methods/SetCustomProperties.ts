@@ -1,7 +1,7 @@
 import type { SchemaEntry } from "@t8/sdk-factory";
-import type { FieldList } from "../entities/FieldList";
-import type { Resource } from "../entities/Resource";
-import type { PathString } from "../util/PathString";
+import type { FieldList } from "../entities/FieldList.ts";
+import type { Resource } from "../entities/Resource.ts";
+import type { PathString } from "../util/PathString.ts";
 
 export type SetCustomProperties = SchemaEntry<{
   request: {

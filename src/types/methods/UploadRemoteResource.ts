@@ -1,8 +1,8 @@
 import type { SchemaEntry } from "@t8/sdk-factory";
-import type { FieldList } from "../entities/FieldList";
-import type { OperationLink } from "../entities/OperationLink";
-import type { PathString } from "../util/PathString";
-import type { URLString } from "../util/URLString";
+import type { FieldList } from "../entities/FieldList.ts";
+import type { OperationLink } from "../entities/OperationLink.ts";
+import type { PathString } from "../util/PathString.ts";
+import type { URLString } from "../util/URLString.ts";
 
 export type UploadRemoteResource = SchemaEntry<{
   request: {

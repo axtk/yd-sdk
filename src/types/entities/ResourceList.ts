@@ -1,5 +1,5 @@
-import type { ResourceItem } from "./ResourceItem";
-import type { Sort } from "./Sort";
+import type { ResourceItem } from "./ResourceItem.ts";
+import type { Sort } from "./Sort.ts";
 
 export type ResourceList = {
   sort: Sort;

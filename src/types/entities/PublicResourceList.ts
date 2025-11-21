@@ -1,5 +1,5 @@
-import type { Resource } from "./Resource";
-import type { ResourceType } from "./ResourceType";
+import type { Resource } from "./Resource.ts";
+import type { ResourceType } from "./ResourceType.ts";
 
 export type PublicResourceList = {
   items: Partial<Resource>[];
