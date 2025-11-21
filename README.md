@@ -1,8 +1,8 @@
-[![npm](https://flat.badgen.net/npm/v/yd-sdk?labelColor=345&color=46e)](https://www.npmjs.com/package/yd-sdk) ![Lightweight](https://flat.badgen.net/bundlephobia/minzip/yd-sdk/?label=minzip&labelColor=345&color=46e) ![TypeScript ✓](https://flat.badgen.net/badge/TypeScript/✓?labelColor=345&color=345) ![browser ✓](https://flat.badgen.net/badge/browser/✓?labelColor=345&color=345) ![node ✓](https://flat.badgen.net/badge/node/✓?labelColor=345&color=345)
-
 # yd-sdk
 
 *Typed isomorphic Yandex Disk SDK*
+
+[![npm](https://img.shields.io/npm/v/yd-sdk?labelColor=345&color=46e)](https://www.npmjs.com/package/yd-sdk) ![Lightweight](https://img.shields.io/bundlephobia/minzip/yd-sdk?label=minzip&labelColor=345&color=46e)
 
 Installation: `npm i yd-sdk`
 
