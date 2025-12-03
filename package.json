@@ -6,9 +6,11 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
+    "build": "npx npm-run-all clean compile",
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
-    "prepublishOnly": "npm run build",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { force: true, recursive: true });\"",
+    "compile": "npx esbuild index.ts --bundle --outdir=dist --platform=neutral",
+    "prepublishOnly": "npx npm-run-all build types",
     "preversion": "npx npm-run-all typecheck shape build types",
     "shape": "npx codeshape",
     "typecheck": "tsc --noEmit",
