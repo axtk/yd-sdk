@@ -23,10 +23,10 @@
     "type": "git",
     "url": "git+https://github.com/axtk/yd-sdk.git"
   },
-  "devDependencies": {
-    "@types/node": "^22.9.0"
-  },
   "dependencies": {
-    "@t8/sdk-factory": "^1.0.8"
+    "@t8/sdk-factory": "^1.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0"
   }
 }
