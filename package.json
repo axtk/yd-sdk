@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
-    "preversion": "npx codeshape"
+    "preversion": "npx npm-run-all shape test",
+    "shape": "npx codeshape",
+    "test": "node tests.ts"
   },
   "author": "axtk",
   "license": "MIT",
