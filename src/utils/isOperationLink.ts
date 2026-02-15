@@ -1,17 +1,11 @@
 import type { OperationLink } from "../types/entities/OperationLink.ts";
 
 export function isOperationLink(x: unknown): x is OperationLink {
-  if (
-    !x ||
-    typeof x !== "object" ||
-    !("href" in x) ||
-    typeof x.href !== "string"
-  )
-    return false;
-
-  try {
-    return new URL(x.href).pathname.endsWith("/disk/operations");
-  } catch {
-    return false;
-  }
+  return (
+    x !== null &&
+    typeof x === "object" &&
+    "href" in x &&
+    typeof x.href === "string" &&
+    /\/disk\/operations\b/.test(x.href)
+  );
 }
