@@ -19,21 +19,103 @@ function test(actual: unknown, expected: unknown) {
 
 test(isOperationLink(null), false);
 test(isOperationLink({}), false);
-test(isOperationLink("https://cloud-api.yandex.net/v1/disk/operations?id=abc"), false);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operations?id=abc" }), true);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operations/?id=abc" }), true);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operationsx/?id=abc" }), false);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operations/abc" }), true);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operations/abc/" }), true);
-test(isOperationLink({ href: "https://cloud-api.yandex.net/v1/disk/operationsx/abc/" }), false);
+test(
+  isOperationLink("https://cloud-api.yandex.net/v1/disk/operations?id=abc"),
+  false,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operations?id=abc",
+  }),
+  true,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operations/?id=abc",
+  }),
+  true,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operationsx/?id=abc",
+  }),
+  false,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operations/abc",
+  }),
+  true,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operations/abc/",
+  }),
+  true,
+);
+test(
+  isOperationLink({
+    href: "https://cloud-api.yandex.net/v1/disk/operationsx/abc/",
+  }),
+  false,
+);
 test(isOperationLink({ href: "https://example.com/abc/" }), false);
 
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operations?id=abc", templated: false }), "abc");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operationsx?id=abc", templated: false }), "");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operations/?id=abc", templated: false }), "abc");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operationsx/?id=abc", templated: false }), "");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operations/abc", templated: false }), "abc");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operations/abc/", templated: false }), "abc");
-test(getOperationId({ method: "GET", href: "https://cloud-api.yandex.net/v1/disk/operationsx/abc/", templated: false }), "");
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operations?id=abc",
+    templated: false,
+  }),
+  "abc",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operationsx?id=abc",
+    templated: false,
+  }),
+  "",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operations/?id=abc",
+    templated: false,
+  }),
+  "abc",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operationsx/?id=abc",
+    templated: false,
+  }),
+  "",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operations/abc",
+    templated: false,
+  }),
+  "abc",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operations/abc/",
+    templated: false,
+  }),
+  "abc",
+);
+test(
+  getOperationId({
+    method: "GET",
+    href: "https://cloud-api.yandex.net/v1/disk/operationsx/abc/",
+    templated: false,
+  }),
+  "",
+);
 
 console.log("\nPassed");
