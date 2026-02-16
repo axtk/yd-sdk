@@ -41,11 +41,9 @@ test(
   false,
 );
 
-for (let href of validOperationHrefs)
-  test(isOperationLink({ href }), true);
+for (let href of validOperationHrefs) test(isOperationLink({ href }), true);
 
-for (let href of invalidOperationHrefs)
-  test(isOperationLink({ href }), false);
+for (let href of invalidOperationHrefs) test(isOperationLink({ href }), false);
 
 for (let href of validOperationHrefs)
   test(getOperationId({ method: "GET", href, templated: false }), "a0b1c2");
