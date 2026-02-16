@@ -11,6 +11,7 @@ export type MoveResource = SchemaEntry<{
       path: PathString;
       /** @default false */
       overwrite?: boolean;
+      force_async?: boolean;
       fields?: FieldList;
     };
   };

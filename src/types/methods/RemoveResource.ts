@@ -9,6 +9,8 @@ export type RemoveResource = SchemaEntry<{
       path: PathString;
       /** @default false */
       permanently?: boolean;
+      md5?: string;
+      force_async?: boolean;
       fields?: FieldList;
     };
   };

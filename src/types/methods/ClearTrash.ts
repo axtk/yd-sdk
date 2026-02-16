@@ -7,6 +7,7 @@ export type ClearTrash = SchemaEntry<{
     query: void | {
       /** If path is not provided, everything in the trash is removed. */
       path?: PathString;
+      force_async?: boolean;
     };
   };
   response:
