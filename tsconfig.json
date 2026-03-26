@@ -5,6 +5,7 @@
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "lib": ["ESNext", "DOM"],
+    "types": ["node"],
     "target": "esnext",
     "module": "nodenext",
     "moduleResolution": "nodenext",
