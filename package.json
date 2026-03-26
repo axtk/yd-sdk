@@ -10,7 +10,8 @@
     "build-schema": "npx reqsrv-sdk --ns=YD --error=src/types/entities/Error.ts",
     "preversion": "npx npm-run-all shape test",
     "shape": "npx codeshape",
-    "test": "node tests.ts"
+    "test": "node tests.ts",
+    "typecheck": "npx codeshape typecheck"
   },
   "author": "axtk",
   "license": "MIT",
