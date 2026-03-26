@@ -1,4 +1,4 @@
-import type { SchemaEntry } from "@t8/sdk-factory";
+import type { SchemaEntry } from "sdkify";
 import type { FieldList } from "../entities/FieldList.ts";
 import type { FileList } from "../entities/FileList.ts";
 import type { MediaType } from "../entities/MediaType.ts";

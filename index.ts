@@ -2,7 +2,7 @@ export {
   getRequestAction,
   TransformInput,
   toStringValueMap,
-} from "@t8/sdk-factory";
+} from "sdkify";
 export * from "./src/const/endpoint.ts";
 export * from "./src/sdk.ts";
 export * from "./src/types/APISchema.ts";

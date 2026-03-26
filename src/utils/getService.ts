@@ -4,7 +4,7 @@ import {
   RequestService,
   type TransformInput,
   toStringValueMap,
-} from "@t8/sdk-factory";
+} from "sdkify";
 import { endpoint as defaultEndpoint } from "../const/endpoint.ts";
 import type { APISchema } from "../types/APISchema.ts";
 import type { Error as ErrorShape } from "../types/entities/Error.ts";

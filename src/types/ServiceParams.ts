@@ -1,4 +1,4 @@
-import type { TransformInput } from "@t8/sdk-factory";
+import type { TransformInput } from "sdkify";
 
 export type ServiceParams =
   | {

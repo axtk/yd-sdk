@@ -1,4 +1,4 @@
-import type { ReqQuery, ReqShape, ResBody, ResShape } from "@t8/sdk-factory";
+import type { ReqQuery, ReqShape, ResBody, ResShape } from "sdkify";
 import type { Error as ErrorShape } from "./entities/Error.ts";
 import type { ClearTrash } from "./methods/ClearTrash.ts";
 import type { CopyResource } from "./methods/CopyResource.ts";

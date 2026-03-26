@@ -1,4 +1,4 @@
-import type { Schema } from "@t8/sdk-factory";
+import type { Schema } from "sdkify";
 import type { ClearTrash } from "./methods/ClearTrash.ts";
 import type { CopyResource } from "./methods/CopyResource.ts";
 import type { CreateResource } from "./methods/CreateResource.ts";

@@ -1,4 +1,4 @@
-import type { SchemaEntry } from "@t8/sdk-factory";
+import type { SchemaEntry } from "sdkify";
 import type { FieldList } from "../entities/FieldList.ts";
 import type { OperationLink } from "../entities/OperationLink.ts";
 import type { PathString } from "../util/PathString.ts";

@@ -1,4 +1,4 @@
-import type { SchemaEntry } from "@t8/sdk-factory";
+import type { SchemaEntry } from "sdkify";
 import type { Disk } from "../entities/Disk.ts";
 
 export type GetDisk = SchemaEntry<{

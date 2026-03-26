@@ -1,4 +1,4 @@
-import type { SchemaEntry } from "@t8/sdk-factory";
+import type { SchemaEntry } from "sdkify";
 import type { FieldList } from "../entities/FieldList.ts";
 import type { PublicResourceList } from "../entities/PublicResourceList.ts";
 import type { ResourceType } from "../entities/ResourceType.ts";
