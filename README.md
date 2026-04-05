@@ -7,13 +7,13 @@ Typed isomorphic Yandex Disk SDK
 ```ts
 import { sdk } from "yd-sdk";
 
-let api = sdk();
+const api = sdk();
 ```
 
 or with an OAuth token required to access non-public resources:
 
 ```ts
-let api = sdk({
+const api = sdk({
   token: "xxx",
 });
 ```
@@ -21,7 +21,7 @@ let api = sdk({
 or with a custom setup:
 
 ```ts
-let api = sdk({
+const api = sdk({
   token: "xxx",
   endpoint: "/yd-api",
   headers: {
@@ -33,11 +33,11 @@ let api = sdk({
 ## API call examples
 
 ```ts
-let { status, body: storageInfo } = await api.storage.info();
+const { status, body: storageInfo } = await api.storage.info();
 ```
 
 ```ts
-let { status, body } = await api.info({ path: "/", limit: 10 });
+const { status, body } = await api.info({ path: "/", limit: 10 });
 ```
 
 All successful API calls resolve with an object containing `status` reflecting the HTTP status code (along with a corresponding `statusText`) and `body` holding the data returned from the API.
@@ -50,7 +50,7 @@ Whenever an SDK method encounters an API error, the method throws an instance of
 import { RequestError } from "yd-sdk";
 
 try {
-  let { body: dirInfo } = await api.info({ path: "/x" });
+  const { body: dirInfo } = await api.info({ path: "/x" });
 
   // use the successfully retrieved resource data
 }
@@ -103,12 +103,12 @@ The type namespaces `YDIn`, `YDOut` and `YDResponse` contain the types of the SD
 ```ts
 import type { YDIn } from "yd-sdk";
 
-let params: YDIn.Public.Info = {
+const params: YDIn.Public.Info = {
   path: "/",
   limit: 10,
 };
 
-let { status, body } = await api.public.info(params);
+const { status, body } = await api.public.info(params);
 // `body` is of type `YDOut.Public.Info`
 // the entire response is of type `YDResponse.Public.Info`
 ```
@@ -122,10 +122,10 @@ Some API methods (and the corresponding SDK methods, like `.copy()` or `.move()`
 ```ts
 import { isOperationLink, getOperationId } from "yd-sdk";
 
-let { body: result } = await api.move({ from: "/x", path: "/y" });
+const { body: result } = await api.move({ from: "/x", path: "/y" });
 
 if (isOperationLink(result)) {
-  let operationId = getOperationId(result);
+  const operationId = getOperationId(result);
 
   // track the operation status with
   // `await api.operation({ id: operationId })`
