@@ -137,4 +137,4 @@ else {
 
 ## See also
 
-&rarr; [*Yandex Disk API Docs*](https://yandex.com/dev/disk-api/doc/en/)
+[Yandex Disk API Docs](https://yandex.com/dev/disk-api/doc/en/)
