@@ -1,6 +1,6 @@
 export {
   getRequestAction,
-  TransformInput,
+  type TransformInput,
   toStringValueMap,
 } from "sdkify";
 export * from "./src/const/endpoint.ts";
